@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ps">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuildMaster AI — Personal Software Architect</title>
+<style>
+:root{--bg:#090d18;--panel:#111a2b;--panel2:#172238;--line:#263651;--txt:#edf3ff;--muted:#91a2bd;--blue:#6ea8ff;--cyan:#65e0d2;--good:#70d6a2}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 60% -20%,#1b3153 0,transparent 45%),var(--bg);color:var(--txt);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:#0b1220d9;position:sticky;top:0;z-index:3;backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:750;font-size:18px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#6ea8ff,#65e0d2);display:grid;place-items:center;color:#08111e;font-weight:900}
+.pill{border:1px solid #31516c;color:#a9d4ff;border-radius:30px;padding:6px 11px;font-size:12px}
+main{max-width:1400px;margin:auto;padding:24px;display:grid;grid-template-columns:250px minmax(320px,1fr) 300px;gap:18px}
+.panel{background:linear-gradient(180deg,#121d30,#0e1727);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.pad{padding:18px}.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+h1{font-size:27px;line-height:1.2;margin:8px 0 7px}h2{font-size:15px;margin:0 0 13px}.muted{color:var(--muted)}.small{font-size:12px}
+.pref{padding:10px 11px;border:1px solid #263b58;background:#101c2e;border-radius:11px;margin-top:8px;color:#c9d8ee;font-size:13px}
+.project{padding:11px;border:1px solid var(--line);border-radius:11px;margin-top:9px;cursor:pointer}.project:hover{border-color:var(--blue)}
+.center{min-height:calc(100vh - 118px);display:flex;flex-direction:column}.intro{padding:25px 24px 18px;border-bottom:1px solid var(--line)}.intro p{max-width:680px;margin:0;color:var(--muted)}
+.chat{padding:20px 22px;flex:1;overflow:auto;min-height:300px}.msg{max-width:90%;padding:13px 15px;border-radius:14px;margin:0 0 13px;white-space:pre-wrap}.assistant{background:#17253b;border:1px solid #2a405f}.user{background:#203e65;border:1px solid #3a6597;margin-left:auto}
+.composer{padding:16px;border-top:1px solid var(--line)}textarea{width:100%;min-height:88px;resize:vertical;background:#0b1423;border:1px solid #30445f;border-radius:13px;color:var(--txt);padding:13px;font:inherit;outline:none}textarea:focus{border-color:var(--blue)}
+.actions{display:flex;gap:9px;align-items:center;justify-content:space-between;margin-top:10px;flex-wrap:wrap}button{border:0;border-radius:11px;padding:10px 15px;font-weight:700;cursor:pointer}.primary{background:linear-gradient(120deg,#70aaff,#68dfd1);color:#081323}.secondary{background:#1a2940;color:#d7e6ff;border:1px solid #314866}.chip{font-size:12px;padding:7px 10px}
+.status{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px}.dot{width:8px;height:8px;border-radius:50%;background:var(--good)}
+.stage{display:flex;gap:9px;align-items:center;margin:12px 0;color:#cbd9ed;font-size:13px}.num{width:25px;height:25px;border-radius:8px;background:#203b5d;display:grid;place-items:center;color:#9bc7ff;font-size:12px}
+.output{background:#0a1321;border:1px solid var(--line);border-radius:12px;padding:12px;min-height:135px;font-size:12px;color:#b7c9e3;white-space:pre-wrap;overflow:auto}
+.footer-note{padding:12px 18px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+@media(max-width:1050px){main{grid-template-columns:220px 1fr}.right{grid-column:1/-1}.right .pad{display:grid;grid-template-columns:1fr 1fr;gap:14px}}
+@media(max-width:700px){header{padding:0 14px}main{display:flex;flex-direction:column;padding:12px}.left{order:2}.center{order:1;min-height:75vh}.right{order:3}.right .pad{display:block}.intro{padding:20px}.intro h1{font-size:23px}}
+</style></head>
+<body>
+<header><div class="brand"><div class="logo">B</div><div>BuildMaster AI<div class="small muted" style="font-weight:400">Personal Software Architect</div></div></div><span class="pill">PERSONAL WORKSPACE</span></header>
+<main>
+<aside class="panel left"><div class="pad"><div class="eyebrow">ستا کاري طریقه</div><h2 style="margin-top:8px">زما په اړه</h2>
+<div class="pref">ژبه: ساده Roman Pashto</div><div class="pref">لارښوونې: لنډې او قدم په قدم</div><div class="pref">غوښتنه: AI دې نوښت وکړي</div><div class="pref">NeedBridge: بې له اجازې یې مه بدلوي</div>
+<div style="height:20px"></div><div class="eyebrow">ستاسې پروژې</div><div id="projects"><div class="project"><b>BuildMaster AI</b><div class="small muted">اوسنۍ پروژه</div></div></div>
+</div><div class="footer-note">حافظه په همدې براوزر کې ساتل کېږي؛ د حذف کنټرول ستا په لاس کې دی.</div></aside>
+<section class="panel center">
+<div class="intro"><div class="eyebrow">یوه جمله ووایه، یو ځای یې جوړوو</div><h1>سلام! زه ستا د سافټویر جوړولو ملګری یم.</h1><p>خپل نظر په عادي خبرو راته ووایه. زه به یې په پلان، ډیزاین، کوډ او ازموینه بدل کړم. مهم بهرني کارونه به ستا له اجازې پرته نه کوم.</p></div>
+<div class="chat" id="chat"><div class="msg assistant">وعلیکم سلام! ❤️\nته یوازې راته ووایه څه جوړول غواړې. زه به لومړی ستا هدف درک کړم، بیا به د پروژې پلان درته جوړ کړم.\n\nمثال: «ما ته د کتابونو د خرڅلاو ویب‌سایټ جوړ کړه.»</div></div>
+<div class="composer"><textarea id="prompt" placeholder="دلته ولیکه: کومه پروژه جوړول غواړې؟"></textarea>
+<div class="actions"><div style="display:flex;gap:7px;flex-wrap:wrap"><button class="secondary chip" data-prompt="ما ته یو عصري شخصي ویب‌سایټ جوړ کړه">شخصي ویب‌سایټ</button><button class="secondary chip" data-prompt="ما ته د کارونو د تنظیم اپلیکیشن جوړ کړه">د کارونو اپ</button></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="secondary" id="send">پلان جوړ کړه</button><button class="primary" id="build">پروژه جوړه کړه ↗</button></div></div>
+<div class="status" style="margin-top:10px"><span class="dot"></span><span id="connection">د محلي نمونې حالت — سرور لا نه دی نښلول شوی</span></div></div>
+</section>
+<aside class="panel right"><div class="pad"><div><div class="eyebrow">د جوړولو بهیر</div><h2 style="margin-top:8px">له نظره تر محصوله</h2>
+<div class="stage"><span class="num">1</span> د غوښتنې پوهېدل</div><div class="stage"><span class="num">2</span> پلان او جوړښت</div><div class="stage"><span class="num">3</span> ډیزاین او کوډ</div><div class="stage"><span class="num">4</span> ازموینه او اصلاح</div><div class="stage"><span class="num">5</span> د خپرولو چمتووالی</div></div>
+<div style="margin-top:22px"><div class="eyebrow">د پروژې نتیجه</div><h2 style="margin-top:8px">د AI ځواب</h2><div class="output" id="output">کله چې غوښتنه ولیکې، د پروژې پلان یا د جوړو شوو فایلونو معلومات به دلته ښکاره شي.</div><button class="secondary" id="download" style="display:none;margin-top:10px;width:100%">د پروژې ZIP ډاونلوډ</button></div>
+<div style="margin-top:20px"><div class="eyebrow">امنیت</div><p class="small muted">د AI پټ کیلي باید یوازې په سرور کې وي، نه په براوزر کې. بهرني بدلونونه او خپرول د تایید غوښتنه کوي.</p></div>
+</div></aside>
+</main>
+<script>
+const chat=document.getElementById('chat'), promptBox=document.getElementById('prompt'), output=document.getElementById('output');
+function addMessage(text,who){const d=document.createElement('div');d.className='msg '+who;d.textContent=text;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;}
+function planFor(text){return `ستاسې غوښتنه: ${text}\\n\\nلومړنی پلان:\\n1. د پروژې هدف او کاروونکي مشخصول\\n2. د پاڼو او فیچرونو جوړښت\\n3. د رنګونو او انټرفېس ډیزاین\\n4. د Frontend او Backend بنسټ جوړول\\n5. ازموینه او د خپرولو چمتووالی\\n\\nدا اوس د نمونې پلان دی. د حقیقي AI جوړولو لپاره باید خوندي سرور او AI API تنظیم شي.`;}
+async function send(){const t=promptBox.value.trim();if(!t)return;addMessage(t,'user');promptBox.value='';output.textContent='د ځواب په تمه...';
+try{const r=await fetch('/api/plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:t})});const data=await r.json();if(r.ok){addMessage(data.text,'assistant');output.textContent=data.text;document.getElementById('connection').textContent='AI سرور نښلول شوی';return;}if(r.status!==503){throw new Error(data.error||'Request failed');}}
+catch(e){if(e.message!=='Failed to fetch'){addMessage('سرور ځواب ورنه کړ: '+e.message,'assistant');output.textContent=e.message;return;}}
+const answer=planFor(t);addMessage(answer,'assistant');output.textContent=answer;
+}
+
+document.getElementById('send').addEventListener('click',send);
+let latestZip = null;
+document.getElementById('build').addEventListener('click', async ()=>{
+ const t=promptBox.value.trim(); if(!t){promptBox.focus();return;}
+ addMessage(t,'user'); promptBox.value=''; output.textContent='AI ستا د پروژې فایلونه جوړوي...';
+ document.getElementById('download').style.display='none'; latestZip=null;
+ try{
+  const r=await fetch('/api/build',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:t})});
+  const data=await r.json();
+  if(!r.ok) throw new Error(data.error||'Build failed');
+  latestZip=data.zipBase64;
+  const summary=`پروژه: ${data.projectName}\n${data.summary}\n\nجوړ شوي فایلونه (${data.fileCount}):\n- ${data.files.join('\n- ')}\n\nZIP چمتو دی. د کوډ له چلولو مخکې یې وګوره او وازمویه.`;
+  addMessage(summary,'assistant'); output.textContent=summary;
+  document.getElementById('download').style.display='block';
+  document.getElementById('connection').textContent='AI سرور نښلول شوی — د پروژې فایلونه جوړ شول';
+ }catch(e){
+  const msg='د پروژې جوړول ونه شول: '+e.message+'\n\nکه API لا نه وي تنظیم شوی، لومړی یې په سرور کې فعال کړه.';
+  addMessage(msg,'assistant'); output.textContent=msg;
+ }
+});
+document.getElementById('download').addEventListener('click',()=>{
+ if(!latestZip)return;
+ const raw=atob(latestZip), bytes=new Uint8Array(raw.length);
+ for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);
+ const url=URL.createObjectURL(new Blob([bytes],{type:'application/zip'}));
+ const a=document.createElement('a');a.href=url;a.download='buildmaster-project.zip';a.click();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+
+promptBox.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();}});
+document.querySelectorAll('[data-prompt]').forEach(b=>b.addEventListener('click',()=>{promptBox.value=b.dataset.prompt;promptBox.focus();}));
+</script></body></html>
